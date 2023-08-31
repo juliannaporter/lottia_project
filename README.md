@@ -1,6 +1,6 @@
 # Evaluation of copy number variation in *Lottia gigantea* for the investigation of their northward range expansion
-## Project Managed by: Julianna Porter
-## PI: Rachael Bay
+Project Managed by: Julianna Porter
+PI: Rachael Bay
 
 ## Overview of Methods
 I called copy number variants using two programs: Delly and Manta. Afterwards, I combined the results using the program SURVIVOR and only retained variants called by both callers with the same genotype. Additionally, variants were filtered for a maximum no call fraction of 20% and a minor allele frequency of 0.05. This was done so CNV results were comparable to SNP results. CNV results were then used for PCA, Structure, and Genotype x Environment Associations. 
