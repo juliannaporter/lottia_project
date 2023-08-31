@@ -1,7 +1,6 @@
 # Evaluation of copy number variation in *Lottia gigantea* for the investigation of their northward range expansion
-Project Managed by: Julianna Porter
+Project Managed by: Julianna Porter  
 PI: Rachael Bay
-
 ## Overview of Methods
 I called copy number variants using two programs: Delly and Manta. Afterwards, I combined the results using the program SURVIVOR and only retained variants called by both callers with the same genotype. Additionally, variants were filtered for a maximum no call fraction of 20% and a minor allele frequency of 0.05. This was done so CNV results were comparable to SNP results. CNV results were then used for PCA, Structure, and Genotype x Environment Associations. 
 **Resources:**
@@ -17,11 +16,11 @@ SURVIVOR [Documentation]
  (https://github.com/fritzsedlazeck/SURVIVOR/wiki)
 ## Pipeline for Calling Copy Number Variants
 ### Step 0: Test Manta on all samples
-**See scripts:**
-    manta.prb.chd.sh
-**Description:**
-When running manta, a select few BAM files gave an error that caused Manta to exit (11/559 samples). The issue was with a single read in the BAM file; I removed the problematic read and Manta ran just fine. I ran Manta on individual BAM files, and for all the files that gave an exit code of 1, I extracted the problematic read from the error log and removed it from the BAM file using picard FilterSamReads. 
-**Excerpt from error log:**
+**See scripts:**  
+    manta.prb.chd.sh  
+**Description:**  
+When running manta, a select few BAM files gave an error that caused Manta to exit (11/559 samples). The issue was with a single read in the BAM file; I removed the problematic read and Manta ran just fine. I ran Manta on individual BAM files, and for all the files that gave an exit code of 1, I extracted the problematic read from the error log and removed it from the BAM file using picard FilterSamReads.   
+**Excerpt from error log:**  
     Failed on command: ‘makeLocusGraph’
     FATAL_ERROR: 2023-Mar-28 18:27:50 /ocean/projects/deb200006p/jporter/install/manta-1.6.0.release_src/src/c++/lib/manta/SVLocusScanner.cpp(1204): Throw in function void getSVLociImpl
     Dynamic exception type: boost::exception_detail::clone_impl<illumina::common::GeneralException>
